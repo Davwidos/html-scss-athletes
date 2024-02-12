@@ -8,6 +8,7 @@ body {
 
 .people {
   grid-template-columns: repeat(2, 200px);
+  grid-auto-rows: min-content;
   justify-content: center;
   align-items: center;
   gap: 30px 40px;
@@ -25,6 +26,7 @@ body {
 
 .person {
   flex-direction: column;
+  justify-content: center;
   gap: 8px;
   transition: transform 1s ease-in-out;
   display: flex;
@@ -77,17 +79,18 @@ body {
 
 .person__extra {
   text-align: center;
+  opacity: 0;
   margin-bottom: 9px;
   font-family: Arial, sans-serif;
   font-size: 18px;
   line-height: 21px;
-  display: none;
+  transform: translateY(-100px);
 }
 
 .person:hover {
   z-index: 1;
   background-color: #eee;
-  transform: scale(1.32)translateY(10px);
+  transform: scale(1.32)translateY(14px);
 }
 
 .person:hover .person__photo {
@@ -99,7 +102,8 @@ body {
 }
 
 .person:hover .person__extra {
-  display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /*# sourceMappingURL=index.b1276d39.css.map */
